@@ -1,4 +1,4 @@
-<Properties StartupItem="LOIC.csproj" RefactoringSettings.EnableRefactorings="True">
+<Properties StartupItem="MOIC.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="frmMain.cs">
     <Files>

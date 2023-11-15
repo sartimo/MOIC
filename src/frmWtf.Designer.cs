@@ -1,4 +1,4 @@
-namespace LOIC
+namespace MOIC
 {
 	partial class frmWtf
 	{
@@ -34,10 +34,10 @@ namespace LOIC
 			//
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::LOIC.Properties.Resources.WTF;
+			this.BackgroundImage = global::MOIC.Properties.Resources.WTF;
 			this.ClientSize = new System.Drawing.Size(416, 300);
 			this.ControlBox = false;
-			this.Icon = global::LOIC.Properties.Resources.LOIC_ICO;
+			this.Icon = global::MOIC.Properties.Resources.MOIC_ICO;
 			this.Name = "frmWtf";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

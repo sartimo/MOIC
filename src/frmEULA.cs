@@ -1,4 +1,4 @@
-/* LOIC - Low Orbit Ion Cannon
+/* MOIC - Medium Orbit Ion Cannon
  * Released to the public domain
  * Enjoy getting v&, kids.
  */
@@ -10,7 +10,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace LOIC
+namespace MOIC
 {
 	public partial class frmEULA : Form
 	{
@@ -20,7 +20,7 @@ namespace LOIC
 
 			txtEULA.Clear();
 			txtEULA.ReadOnly = true;
-			txtEULA.Rtf = global::LOIC.Properties.Resources.EULA;
+			txtEULA.Rtf = global::MOIC.Properties.Resources.EULA;
 
 			BringToFront();
 		}

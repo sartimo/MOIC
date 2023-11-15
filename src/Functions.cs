@@ -1,4 +1,4 @@
-/* LOIC - Low Orbit Ion Cannon
+/* MOIC - Medium Orbit Ion Cannon
  * Released to the public domain
  * Enjoy getting v&, kids.
  */
@@ -6,7 +6,7 @@
 using System;
 using System.Text;
 
-namespace LOIC
+namespace MOIC
 {
 	public static class Functions
 	{

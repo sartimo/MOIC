@@ -1,4 +1,4 @@
-/* LOIC - Low Orbit Ion Cannon
+/* MOIC - Medium Orbit Ion Cannon
  * Released to the public domain
  * Enjoy getting v&, kids.
  */
@@ -9,7 +9,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
 
-namespace LOIC
+namespace MOIC
 {
 	public class HTTPFlooder : cHLDos
 	{

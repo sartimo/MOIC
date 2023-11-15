@@ -1,4 +1,4 @@
-namespace LOIC
+namespace MOIC
 {
     partial class frmEZGrab
     {
@@ -190,7 +190,7 @@ namespace LOIC
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.LightBlue;
-            this.Icon = global::LOIC.Properties.Resources.LOIC_ICO;
+            this.Icon = global::MOIC.Properties.Resources.MOIC_ICO;
             this.Name = "frmEZGrab";
             this.Text = "HiveMind / Overlord eZGrab";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEZGrab_FormClosed);

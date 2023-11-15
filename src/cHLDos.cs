@@ -19,7 +19,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LOIC
+namespace MOIC
 {
 	/// <summary>
 	/// Abstract class cHLDos contributed by B²
@@ -357,9 +357,9 @@ namespace LOIC
 	} // class ReCoil
 
 	/// <summary>
-	/// SlowLoic is the port of RSnake's SlowLoris
+	/// SlowMOIC is the port of RSnake's SlowLoris
 	/// </summary>
-	public class SlowLoic : cHLDos
+	public class SlowMOIC : cHLDos
 	{
 		private string _dns;
 		private string _ip;
@@ -375,7 +375,7 @@ namespace LOIC
 		private List<Socket> _lSockets  = new List<Socket>();
 
 		/// <summary>
-		/// creates the SlowLoic / -Loris object. <.<
+		/// creates the SlowMOIC / -Loris object. <.<
 		/// </summary>
 		/// <param name="dns">DNS string of the target</param>
 		/// <param name="ip">IP string of a specific server. Use this ONLY if the target does loadbalancing between different IPs and you want to target a specific IP. normally you want to provide an empty string!</param>
@@ -388,7 +388,7 @@ namespace LOIC
 		/// <param name="randcmds">randomizes the sent header for every request on the same socket. (however all sockets send the same partial header during the same cyclus)</param>
 		/// <param name="useGet">if set to TRUE it uses the GET-command - due to the fact that http-Ready mitigates this change this to FALSE to use POST</param>
 		/// <param name="usegZip">turns on the gzip / deflate header to check for: CVE-2009-1891</param>
-		public SlowLoic(string dns, string ip, int port, string subSite, int delay, int timeout, bool random, int nSockets, bool randcmds, bool useGet, bool usegZip)
+		public SlowMOIC(string dns, string ip, int port, string subSite, int delay, int timeout, bool random, int nSockets, bool randcmds, bool useGet, bool usegZip)
 		{
 			this._dns = (dns == "") ? ip : dns; //hopefully they know what they are doing :)
 			this._ip = ip;
@@ -525,7 +525,7 @@ namespace LOIC
 				this.IsDelayed = true;
 			}
 		}
-	} // class SlowLoic
+	} // class SlowMOIC
 
     //start of ICMP class
     public class ICMP : cHLDos

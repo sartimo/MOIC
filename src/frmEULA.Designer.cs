@@ -1,4 +1,4 @@
-namespace LOIC
+namespace MOIC
 {
     partial class frmEULA
     {
@@ -90,11 +90,11 @@ namespace LOIC
             this.Controls.Add(this.btnDecline);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.txtEULA);
-            this.Icon = global::LOIC.Properties.Resources.LOIC_ICO;
+            this.Icon = global::MOIC.Properties.Resources.MOIC_ICO;
             this.MinimumSize = new System.Drawing.Size(500, 480);
             this.Name = "frmEULA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Newfag\'s Low Orbit Ion Cannon End User License Agreement (EULA)";
+            this.Text = "Newfag\'s Medium Orbit Ion Cannon End User License Agreement (EULA)";
             this.ResumeLayout(false);
             this.PerformLayout();
 

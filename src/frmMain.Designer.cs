@@ -1,4 +1,4 @@
-namespace LOIC
+namespace MOIC
 {
 	partial class frmMain
 	{
@@ -454,7 +454,7 @@ namespace LOIC
             this.txtThreads.TabIndex = 6;
             this.txtThreads.Text = "10";
             this.txtThreads.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtThreads, "How many users LOIC should emulate");
+            this.TTip.SetToolTip(this.txtThreads, "How many users MOIC should emulate");
             this.txtThreads.Leave += new System.EventHandler(this.txtThreads_Leave);
             //
             // cbMethod
@@ -469,7 +469,7 @@ namespace LOIC
             "UDP",
             "HTTP",
             "ReCoil",
-            "slowLOIC",
+            "slowMOIC",
             "ICMP"});
             this.cbMethod.Location = new System.Drawing.Point(75, 76);
             this.cbMethod.Name = "cbMethod";
@@ -698,7 +698,7 @@ namespace LOIC
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(165, 14);
             this.label24.TabIndex = 14;
-            this.label24.Text = "github.com/NewEraCracker/LOIC";
+            this.label24.Text = "github.com/NewEraCracker/MOIC";
             this.TTip.SetToolTip(this.label24, "Go to official page");
             this.label24.Click += new System.EventHandler(this.label24_Click);
             //
@@ -808,11 +808,11 @@ namespace LOIC
             this.txtIRCchannel.Name = "txtIRCchannel";
             this.txtIRCchannel.Size = new System.Drawing.Size(77, 20);
             this.txtIRCchannel.TabIndex = 20;
-            this.txtIRCchannel.Text = "#loic";
+            this.txtIRCchannel.Text = "#MOIC";
             //
             // pBanner
             //
-            this.pBanner.Image = global::LOIC.Properties.Resources.LOIC;
+            this.pBanner.Image = global::MOIC.Properties.Resources.MOIC;
             this.pBanner.Location = new System.Drawing.Point(12, 12);
             this.pBanner.Name = "pBanner";
             this.pBanner.Size = new System.Drawing.Size(184, 462);
@@ -914,7 +914,7 @@ namespace LOIC
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.LightBlue;
-            this.Icon = global::LOIC.Properties.Resources.LOIC_ICO;
+            this.Icon = global::MOIC.Properties.Resources.MOIC_ICO;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "frmMain";

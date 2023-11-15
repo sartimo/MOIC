@@ -11,12 +11,12 @@
     <ProjectGuid>{54040692-D1B5-4910-B661-26651BD0EF18}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LOIC</RootNamespace>
-    <AssemblyName>LOIC</AssemblyName>
+    <RootNamespace>MOIC</RootNamespace>
+    <AssemblyName>MOIC</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ApplicationIcon>Resources\LOIC.ico</ApplicationIcon>
-    <StartupObject>LOIC.Program</StartupObject>
+    <ApplicationIcon>Resources\MOIC.ico</ApplicationIcon>
+    <StartupObject>MOIC.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -109,8 +109,8 @@
     <None Include="app.manifest" />
     <None Include="Resources\EULA.rtf" />
     <None Include="Resources\WTF.jpg" />
-    <None Include="Resources\LOIC.gif" />
-    <None Include="Resources\LOIC.ico" />
+    <None Include="Resources\MOIC.gif" />
+    <None Include="Resources\MOIC.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="IRC\IRC.csproj">

@@ -1,4 +1,4 @@
-/* LOIC - Low Orbit Ion Cannon
+/* MOIC - Medium Orbit Ion Cannon
  * Released to the public domain
  * Enjoy getting v&, kids.
  */
@@ -6,7 +6,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace LOIC
+namespace MOIC
 {
 	static class Program
 	{
@@ -30,7 +30,7 @@ namespace LOIC
 					try {ircport = cmdLine[count + 2];}
 					catch(Exception) {ircport = "6667";} //default
 					try {ircchannel = cmdLine[count + 3];}
-					catch(Exception) {ircchannel = "#loic";} //default
+					catch(Exception) {ircchannel = "#MOIC";} //default
 				}
 
 				count++;
