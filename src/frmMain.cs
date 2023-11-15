@@ -1065,7 +1065,7 @@ namespace MOIC
 		/// <param name="e">EventArgs.</param>
 		private void label24_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/NewEraCracker/MOIC");
+			Process.Start("https://github.com/sartimo/MOIC");
 		}
 
 		/// <summary>
