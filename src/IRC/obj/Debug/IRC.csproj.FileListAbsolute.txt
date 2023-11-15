@@ -1,0 +1,7 @@
+C:\projects\LOIC\src\bin\Debug\IRC.dll
+C:\projects\LOIC\src\bin\Debug\IRC.pdb
+C:\projects\LOIC\src\IRC\obj\Debug\IRC.csproj.AssemblyReference.cache
+C:\projects\LOIC\src\IRC\obj\Debug\IRC.csproj.CoreCompileInputs.cache
+C:\projects\LOIC\src\IRC\obj\Debug\IRC.csproj.CopyComplete
+C:\projects\LOIC\src\IRC\obj\Debug\IRC.dll
+C:\projects\LOIC\src\IRC\obj\Debug\IRC.pdb
