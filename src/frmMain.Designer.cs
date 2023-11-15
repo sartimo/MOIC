@@ -698,7 +698,7 @@ namespace MOIC
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(165, 14);
             this.label24.TabIndex = 14;
-            this.label24.Text = "github.com/NewEraCracker/MOIC";
+            this.label24.Text = "github.com/sartimo/MOIC";
             this.TTip.SetToolTip(this.label24, "Go to official page");
             this.label24.Click += new System.EventHandler(this.label24_Click);
             //
