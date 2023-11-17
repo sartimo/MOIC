@@ -7,5 +7,5 @@ Medium Orbit Ion Cannon - An open source multi-threaded network stress tool base
 ```bash
 $ cd src/
 $ msbuild
-$ mono ./bin/Debug/MOIC.exe
+$ ./bin/Debug/MOIC.exe
 ```
